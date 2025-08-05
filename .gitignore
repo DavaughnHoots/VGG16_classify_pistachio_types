@@ -1,0 +1,34 @@
+# Dataset - too large for GitHub
+Pistachio_Dataset/
+
+# Model files
+*.h5
+*.hdf5
+*.pkl
+
+# Claude settings
+.claude/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+
+# Development/temporary scripts
+quick_*.py
+simulated_*.py
