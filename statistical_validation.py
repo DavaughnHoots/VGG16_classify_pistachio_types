@@ -32,7 +32,7 @@ CONFIG = {
     'epochs': 10,  # Reduced from 20 for faster results
     'learning_rate': 0.0001,
     'validation_split': 0.14,  # Your 86/14 split
-    'train_dir': '/mnt/c/Users/Owner/Documents/Research/VGG16/Pistachio_Dataset/Pistachio_Image_Dataset/Pistachio_Image_Dataset',
+    'train_dir': 'C:/Users/Owner/Documents/Research/VGG16/Pistachio_Dataset/Pistachio_Image_Dataset/Pistachio_Image_Dataset',
     'random_seeds': [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
 }
 
@@ -280,13 +280,13 @@ def run_statistical_validation():
 def generate_latex_table(summary):
     """Generate LaTeX table for paper"""
     latex_table = """
-\\begin{table}[htbp]
+\\begin{{table}}[htbp]
 \\centering
-\\caption{Statistical Validation Results over 10 Independent Runs}
-\\label{tab:statistical_validation}
-\\begin{tabular}{lc}
+\\caption{{Statistical Validation Results over 10 Independent Runs}}
+\\label{{tab:statistical_validation}}
+\\begin{{tabular}}{{lc}}
 \\hline
-\\textbf{Metric} & \\textbf{Value (Mean ± Std)} \\\\
+\\textbf{{Metric}} & \\textbf{{Value (Mean ± Std)}} \\\\
 \\hline
 Accuracy & {:.4f} ± {:.4f} \\\\
 Precision (macro) & {:.4f} ± {:.4f} \\\\
@@ -296,8 +296,8 @@ Specificity & {:.4f} ± {:.4f} \\\\
 \\hline
 95\\% CI (Accuracy) & [{:.4f}, {:.4f}] \\\\
 \\hline
-\\end{tabular}
-\\end{table}
+\\end{{tabular}}
+\\end{{table}}
 """.format(
         summary['mean_accuracy'], summary['std_accuracy'],
         summary['all_metrics']['precision_macro']['mean'], 
